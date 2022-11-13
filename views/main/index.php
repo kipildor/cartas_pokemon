@@ -1,13 +1,8 @@
 <?php
-    //require_once '../../config/config.php';
-    //define('URL', 'http://localhost/cartas_pokemon/');
-    //require_once constant('URL').'views/header.php'; 
-    //require_once 'http://localhost/cartas_pokemon/config/config.php';
+    $v=0;
 ?>
-
-
 <!DOCTYPE html>
-<html lang="es" style="font-size: 10px;">
+<html lang="en" style="font-size: 10px;">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,7 +26,7 @@
                 <a class="nav-link" href="#">Inicio</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">Buscar Pokemon</a>
+                <a class="nav-link" href="#">Buscar Pokemones</a>
                 </li>
                 <!--
                 <li class="nav-item">
@@ -46,8 +41,9 @@
         </div>
     </nav>
 
+<?php
 
-
+?>
 
     <div class="container text-center">
         <div class="tablero row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center">

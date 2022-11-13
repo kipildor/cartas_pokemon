@@ -1,6 +1,6 @@
 <?php
-
-define('URL', 'http://localhost/cartas_pokemon/');
+echo 'estoy en config.php **** ';
+//define('URL', 'http://localhost/cartas_pokemon/');
 /*
 define('HOST', 'localhost');
 define('DB', 'poke');

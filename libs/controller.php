@@ -1,10 +1,10 @@
 <?php
-
+    include './view.php';
 class Controller{
 
     function __construct(){
         //echo "<p>Controlador base</p>";
-        $this->view = new View();
+        $view = new View();
     }
 
     function loadModel($model){
@@ -14,7 +14,7 @@ class Controller{
             require $url;
 
             $modelName = $model.'Model';
-            $this->model = new $modelName();
+            $model = new $modelName();
         }
     }
 }
