@@ -26,7 +26,7 @@
                 <a class="nav-link" href="<?php echo FOLDER_PATH; ?>">Inicio</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">Buscar Pokemones</a>
+                <a class="nav-link" href="<?php echo FOLDER_PATH; ?>/buscarPokemon">Buscar Pokemones</a>
                 </li>
                 
             </ul>
