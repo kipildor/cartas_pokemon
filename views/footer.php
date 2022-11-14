@@ -1,5 +1,5 @@
-    <!-- Remove the container if you want to extend the Footer to full width. -->
-    <div class="container_ col-12">
+        <!-- Remove the container if you want to extend the Footer to full width. -->
+        <div class="container_ col-12">
         <!-- Footer -->
         <footer class="text-center text-lg-start text-white bg-dark">
             <!-- Grid container -->
@@ -27,17 +27,7 @@
                     <p>
                         PHP
                     </p>
-                    <!--
-                    <p>
-                    <a class="text-white">MDWordPress</a>
-                    </p>
-                    <p>
-                    <a class="text-white">BrandFlow</a>
-                    </p>
-                    <p>
-                    <a class="text-white">Bootstrap Angular</a>
-                    </p>
-                    -->
+                    
                 </div>
                 <!-- Grid column -->
 
@@ -54,14 +44,7 @@
                     <p>
                     <a class="text-white" href="https://www.linkedin.com/in/leandro-quipildor-791b6132/">My LinkedIn</a>
                     </p>
-                    <!--
-                    <p>
-                    <a class="text-white">Shipping Rates</a>
-                    </p>
-                    <p>
-                    <a class="text-white">Help</a>
-                    </p>
-                    -->
+                    
                 </div>
 
                 <!-- Grid column -->
@@ -73,7 +56,6 @@
                     <p><i class="fas fa-home mr-3"></i> San Justo, Buenos Aires, Argentina</p>
                     <p><i class="fas fa-envelope mr-3"></i> leandro_1980@live.com.ar</p>
                     <p><i class="fas fa-phone mr-3"></i> Celular: 11 5592 9086</p>
-                    <!--<p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>-->
                 </div>
                 <!-- Grid column -->
                 </div>
@@ -144,15 +126,8 @@
     <!-- End of .container -->
 
 
-
-
-
-
-
-
-
-        <script src="http://localhost/cartas_pokemon/views/js/bootstrap.bundle.min.js"></script>
-        <script src="http://localhost/cartas_pokemon/views/js/bootstrap.min.js"></script>
+        <script src="<?php echo FOLDER_PATH; ?>/views/js/bootstrap.bundle.min.js"></script>
+        <script src="<?php echo FOLDER_PATH; ?>/views/js/bootstrap.min.js"></script>
         <script src="https://kit.fontawesome.com/55d8f7505d.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
