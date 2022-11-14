@@ -1,6 +1,21 @@
 <?php
-echo 'estoy en config.php **** ';
-//define('URL', 'http://localhost/cartas_pokemon/');
+    //echo 'estoy en config.php **** ';
+
+    $folderPath = dirname($_SERVER['SCRIPT_NAME']);
+    $urlPath = $_SERVER['REQUEST_URI'];
+    $url = substr($urlPath, strlen($folderPath));
+
+    //echo $folderPath . '</br>';
+    //echo $urlPath . '</br>';
+    //echo $url . '</br>';
+    /*
+    echo '<pre>';
+    var_dump($_SERVER);
+    echo '</pre>';
+*/
+
+
+    define('URL', $url);
 /*
 define('HOST', 'localhost');
 define('DB', 'poke');
