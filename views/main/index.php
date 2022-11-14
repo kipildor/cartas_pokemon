@@ -1,48 +1,22 @@
-<?php
-    $v=0;
-?>
 <!DOCTYPE html>
 <html lang="en" style="font-size: 10px;">
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cartas de Pokemones</title>
-    <link rel="stylesheet" href="http://localhost/cartas_pokemon/views/css/normalize.css">
-    <link rel="stylesheet" href="http://localhost/cartas_pokemon/views/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://localhost/cartas_pokemon/views/css/style.css" >
-    <!--<link rel="stylesheet" href="<?php //echo constant('URL'); ?>views/css/default.css">-->
+    <?php require_once('config/config.php'); ?>
+    
+    <link rel="stylesheet" href="<?php echo FOLDER_PATH; ?>/views/css/normalize.css">
+    <link rel="stylesheet" href="<?php echo FOLDER_PATH; ?>/views/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo FOLDER_PATH; ?>/views/css/style.css" >
+    
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">Cartas de Pokemon</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item active">
-                <a class="nav-link" href="#">Inicio</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Buscar Pokemones</a>
-                </li>
-                <!--
-                <li class="nav-item">
-                <a class="nav-link" href="#">Services</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-                </li>
-                -->
-            </ul>
-            </div>
-        </div>
-    </nav>
 
 <?php
-
+    require_once(FOLDER_PATH . '/header.php');
 ?>
 
     <div class="container text-center">
@@ -97,17 +71,7 @@
                     <p>
                         PHP
                     </p>
-                    <!--
-                    <p>
-                    <a class="text-white">MDWordPress</a>
-                    </p>
-                    <p>
-                    <a class="text-white">BrandFlow</a>
-                    </p>
-                    <p>
-                    <a class="text-white">Bootstrap Angular</a>
-                    </p>
-                    -->
+                    
                 </div>
                 <!-- Grid column -->
 
@@ -124,14 +88,7 @@
                     <p>
                     <a class="text-white" href="https://www.linkedin.com/in/leandro-quipildor-791b6132/">My LinkedIn</a>
                     </p>
-                    <!--
-                    <p>
-                    <a class="text-white">Shipping Rates</a>
-                    </p>
-                    <p>
-                    <a class="text-white">Help</a>
-                    </p>
-                    -->
+                    
                 </div>
 
                 <!-- Grid column -->
@@ -143,7 +100,6 @@
                     <p><i class="fas fa-home mr-3"></i> San Justo, Buenos Aires, Argentina</p>
                     <p><i class="fas fa-envelope mr-3"></i> leandro_1980@live.com.ar</p>
                     <p><i class="fas fa-phone mr-3"></i> Celular: 11 5592 9086</p>
-                    <!--<p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>-->
                 </div>
                 <!-- Grid column -->
                 </div>
@@ -221,8 +177,8 @@
 
 
 
-        <script src="http://localhost/cartas_pokemon/views/js/bootstrap.bundle.min.js"></script>
-        <script src="http://localhost/cartas_pokemon/views/js/bootstrap.min.js"></script>
+        <script src="/cartas_pokemon/views/js/bootstrap.bundle.min.js"></script>
+        <script src="/cartas_pokemon/views/js/bootstrap.min.js"></script>
         <script src="https://kit.fontawesome.com/55d8f7505d.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>

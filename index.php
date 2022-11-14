@@ -7,6 +7,7 @@
     //echo $asd;
     require_once(__DIR__ . '/router.php');
 
+
     $router = new Router();
     $router->run();
     
@@ -15,5 +16,5 @@
     
     //$vista->prueba();
 
-    echo 'estoy en el index de la raiz';
+    //echo 'estoy en el index de la raiz';
 ?>

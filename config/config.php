@@ -13,9 +13,10 @@
     var_dump($_SERVER);
     echo '</pre>';
 */
-
+    
 
     define('URL', $url);
+    define('FOLDER_PATH', $folderPath);
 /*
 define('HOST', 'localhost');
 define('DB', 'poke');
