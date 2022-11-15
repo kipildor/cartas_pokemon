@@ -17,6 +17,7 @@
 
     define('URL', $url);
     define('FOLDER_PATH', $folderPath);
+    define('CANT_POKE', 905);
 /*
 define('HOST', 'localhost');
 define('DB', 'poke');

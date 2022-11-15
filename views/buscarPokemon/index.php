@@ -13,10 +13,12 @@
                 <!--<div class="col col-md-3 costado-busq"></div>-->
                 
                 <div class="form-busq col col-md-6">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Buscar Pokemon" aria-label="Buscar Pokemon" aria-describedby="buscar-poke">
-                        <button class="btn btn-outline-secondary" type="button" id="buscar-poke">Buscar Pokemon</button>
-                    </div>
+                    <form action="<?php echo FOLDER_PATH; ?>/buscarPokemon/buscar" method="POST">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Buscar Pokemon" aria-label="Buscar Pokemon" aria-describedby="poke" name="poke">
+                            <button class="btn btn-outline-secondary" type="submit" id="poke">Buscar Pokemon</button>
+                        </div>
+                    </form>
                 </div>
                 
                 <!--<div class="col col-md-3 costado-busq"></div>-->
