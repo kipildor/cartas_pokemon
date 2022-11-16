@@ -3,7 +3,7 @@
                 <div class="card">
                     
                     <div class="card_encabezado">
-                        <div class="card_encabezado_nombre">Charmander</div>
+                        <div class="card_encabezado_nombre"><?php echo var_dump($router); ?></div>
                         <div class="card_encabezado_derecha">
                             <div class="card_encabezado_hp">60 HP</div>
                             <div class="card_encabezado_imgtipo">
