@@ -1,6 +1,7 @@
 
 <?php
     require_once('views/header.php');
+    $benja2 = "mon";
 ?>
 
     
@@ -13,9 +14,9 @@
                 <!--<div class="col col-md-3 costado-busq"></div>-->
                 
                 <div class="form-busq col col-md-6">
-                    <form action="<?php echo FOLDER_PATH; ?>/buscarPokemon/buscar" method="POST">
+                    <form action="<?php echo FOLDER_PATH; ?>/buscarPokemon" method="POST">
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Buscar Pokemon" aria-label="Buscar Pokemon" aria-describedby="poke" name="poke">
+                            <input type="text" class="form-control" placeholder="Buscar Pokemon (Hasta el <?php echo CANT_POKE; ?>)" aria-label="Buscar Pokemon" aria-describedby="poke" name="poke">
                             <button class="btn btn-outline-secondary" type="submit" id="poke">Buscar Pokemon</button>
                         </div>
                     </form>
@@ -26,7 +27,7 @@
         </div>
 
         <div class="tablero row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center">
-
+        <!--<h1><?php //echo $pokemonRecibido->getNombre(); ?></h1>-->
 
         
 

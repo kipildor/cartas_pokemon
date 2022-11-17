@@ -4,7 +4,7 @@
         private $nombre;
         private $hp;
         private $urlImg;
-
+/*
         public function __construct($idPokemon, $nombre, $hp, $urlImg)
         {
             $this->idPokemon = $idPokemon;
@@ -12,7 +12,11 @@
             $this->hp = $hp;
             $this->urlImg = $urlImg;
         }
-
+*/
+        public function __construct()
+        {
+            
+        }
         public function getIdPokemon(){
             return $this->idPokemon;
         }

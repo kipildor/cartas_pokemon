@@ -3,7 +3,7 @@
                 <div class="card">
                     
                     <div class="card_encabezado">
-                        <div class="card_encabezado_nombre"><?php echo var_dump($router); ?></div>
+                        <div class="card_encabezado_nombre"><?php echo $pokemonRecibido->getNombre(); ?></div>
                         <div class="card_encabezado_derecha">
                             <div class="card_encabezado_hp">60 HP</div>
                             <div class="card_encabezado_imgtipo">
@@ -14,8 +14,8 @@
 
                     <div class="container card_img_pokemon_contenedor">
                         <div class="card_img_pokemon_contenedor_2">
-                           <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png" 
-                                alt="Charmander" class="card_img_pokemon">
+                           <img src="<?php echo $pokemonRecibido->getUrlImg(); ?>" 
+                                alt="<?php echo $pokemonRecibido->getNombre(); ?>" class="card_img_pokemon">
                         </div>
                     </div>
 
