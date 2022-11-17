@@ -18,9 +18,15 @@ require_once('models/Pokemon.php');
             
             $numero = $data['id'];
             $nombre = $data['name'];
-            //$this->hp = $data['name'];
+            $hp = 0;
             $urlImagen = $data['sprites']['other']['official-artwork']['front_default'];
             
+            //$estadisticas = $data['stats']
+            foreach($data['stats'] as $fila){
+                if($fila['stat']['name'] == 'hp'){
+                    $hp = $fila['base_stat'];
+                }
+            }
             /*
             $this->nombreAtaque_1 = $data['name'];
             $this->descripcionAtaque_1 = $data['name'];
@@ -31,6 +37,7 @@ require_once('models/Pokemon.php');
 
             $this->pokemon->setNombre($nombre);
             $this->pokemon->setIdPokemon($numero);
+            $this->pokemon->setHp($hp);
             $this->pokemon->setUrlImg($urlImagen);
             //$this->pokemon = new Pokemon($numero, $nombre, 0, $urlImagen);
             return $this->pokemon;

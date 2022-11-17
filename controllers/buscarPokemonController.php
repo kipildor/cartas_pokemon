@@ -15,11 +15,11 @@
 
             $pokemonRecibido = new Pokemon();
             $pokemonRecibido = $pok->buscarP($cadena);
+            //$estadisticas =
             
-            $this->nombre = $pokemonRecibido->getNombre();
-            $nombre2 = $pokemonRecibido->getNombre();
+            
             require_once("views/buscarPokemon/index.php");
-            //$this->cadena = $_POST['poke'];
+            
             
         }
 
@@ -32,10 +32,6 @@
             }
             
             return $aBuscar;
-            //$buscarPoke = new BuscarPokemonModel();
-            //$this->pokemon = $buscarPoke->buscarP($this->cadena);
-
-            //require_once("views/buscarPokemon/index.php");
         }
     }
 
