@@ -1,5 +1,5 @@
 <?php
-    class Ataque{
+    trait Ataque{
         private $idAtaque;
         private $nombre;
         private $descripcion;

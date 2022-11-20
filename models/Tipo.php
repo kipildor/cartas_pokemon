@@ -4,16 +4,19 @@
         private $descripcion;
         private $urlImgTipo;
 
-/*
+
         public function __construct(){
 
         }
-*/
+
+/*
         public function __construct($idTipo, $descripcion, $urlImgTipo){
             $this->idTipo = $idTipo;
             $this->descripcion = $descripcion;
             $this->urlImgTipo = $urlImgTipo;
         }
+*/
+        //public function 
 
         public function getIdTipo(){
             return $this->idTipo;

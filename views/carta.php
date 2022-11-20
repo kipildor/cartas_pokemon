@@ -7,7 +7,7 @@
                         <div class="card_encabezado_derecha">
                             <div class="card_encabezado_hp"><?php echo $pokemonRecibido->getHp(); ?> HP</div>
                             <div class="card_encabezado_imgtipo">
-                                <img src="<?php echo FOLDER_PATH; ?>/views/images/tipo_fuego.png" class="encabezado_imgtipo" alt="Imagen tipo fuego">
+                                <img src="<?php echo FOLDER_PATH . $pokemonRecibido->getTipos()[0]->getUrlImgTipo(); ?>" class="encabezado_imgtipo" alt="Imagen tipo fuego">
                             </div>
                         </div>
                     </div>

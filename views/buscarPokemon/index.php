@@ -1,7 +1,7 @@
 
 <?php
     require_once('views/header.php');
-    $benja2 = "mon";
+    //$benja2 = "mon";
 ?>
 
     
@@ -37,6 +37,7 @@
 
 <?php
         //include '../carta.php';
+        //print_r($pokemonRecibido->tipos());
 ?>
 
 <?php

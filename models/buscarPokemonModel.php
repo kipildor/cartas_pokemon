@@ -1,11 +1,13 @@
 <?php
 require_once('models/Pokemon.php');
+require_once('models/Tipo.php');
     class BuscarPokemonModel{
         public $pokemon;
         //public $nombre;//test
         function __construct(){
             require_once("config/config.php");
             $this->pokemon = new Pokemon();
+            //$this->tipos[] = new Tipo();
         }
 
         function buscarP($poke){
@@ -40,6 +42,20 @@ require_once('models/Pokemon.php');
             $this->pokemon->setHp($hp);
             $this->pokemon->setUrlImg($urlImagen);
             //$this->pokemon = new Pokemon($numero, $nombre, 0, $urlImagen);
+            
+            foreach($data['types'] as $fila){
+                $tipo = new Tipo();
+                $tipo = $this->pokemon->cargarTipos($fila['type']['name']);
+                //array_push($this->pokemon->tipos, $tipo);
+                $this->pokemon->addTipos($tipo);
+            }
+        /*
+            $tipo = new Tipo();
+            $tipo->setDescripcion('Lucha');
+            $tipo->setIdTipo(2);
+            $tipo->setUrlImgTipo('/views/images/tipo_lucha.png');
+            $this->pokemon->addTipos($tipo);
+        */
             return $this->pokemon;
         }
     }
