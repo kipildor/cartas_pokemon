@@ -1,6 +1,6 @@
 
             <div class="contenedor-card_ col justify-content-center">
-                <div class="card">
+                <div class="card" style="background-image: '<?php echo FOLDER_PATH; ?>/views/images/marmol_violeta.jpg';">
                     
                     <div class="card_encabezado">
                         <div class="card_encabezado_nombre"><?php echo $pokemonRecibido->getNombre(); ?></div>
@@ -11,7 +11,7 @@
     foreach($pokemonRecibido->getTipos() as $filaTipo){
 
                             echo'<div class="card_encabezado_imgtipo">
-                                <img src="'. FOLDER_PATH . $filaTipo->getUrlImgTipo() .'" class="encabezado_imgtipo" alt="Imagen tipo fuego">
+                                <img src="'. FOLDER_PATH . $filaTipo->getUrlImgTipo() .'" class="encabezado_imgtipo" alt="Imagen tipo '.$filaTipo->getDescripcion().'">
                             </div>';
                             
     }
@@ -27,39 +27,52 @@
                     </div>
 
                     <div class="card_contenedor_habilidades col-12">
-                        <div class="card_habilidad_individual col-12">
+                        
+<?php
+    $contadorDeAtaques = 0;
+    if($pokemonRecibido->getAtaque_1()->getIdAtaque() > 0){
+                    echo '<div class="card_habilidad_individual col-12">
                             <div class="card_habilidad_bloqueSup col-12 row">
-                                <div class="card_habilidad_nombre col-10 col-sm-9 col-xs-8">
-                                    solar-power
-                                </div>
+                                <div class="card_habilidad_nombre col-10 col-sm-9 col-xs-8">' .
+                                    $pokemonRecibido->getAtaque_1()->getNombre() .
+                                '</div>
 
                                 <div class="card_habilidad_poder col-2 col-sm-3 col-xs-4">
                                     35
                                 </div>
                             </div>
 
-                            <div class="card_habilidad_descripcion col-12">
-                                Si hay sol, baja los PS, pero <br> potencia el At. Esp.
-                            </div>
-                        </div>
+                            <div class="card_habilidad_descripcion col-12">' .
+                                $pokemonRecibido->getAtaque_1()->getDescripcion() .
+                            '</div>
+                        </div>';
+        $contadorDeAtaques++;
+    }
 
-                        <hr>
+    if($pokemonRecibido->getAtaque_2()->getIdAtaque() > 0){
 
-                        <div class="card_habilidad_individual col-12">
+        if($contadorDeAtaques > 0){
+            echo '<hr>';
+        }
+                    echo '<div class="card_habilidad_individual col-12">
                             <div class="card_habilidad_bloqueSup col-12 row">
-                                <div class="card_habilidad_nombre col-10 col-sm-9 col-xs-8">
-                                    solar-power
-                                </div>
+                                <div class="card_habilidad_nombre col-10 col-sm-9 col-xs-8">' .
+                                    $pokemonRecibido->getAtaque_2()->getNombre() .
+                                '</div>
 
                                 <div class="card_habilidad_poder col-2 col-sm-3 col-xs-4">
                                     35
                                 </div>
                             </div>
 
-                            <div class="card_habilidad_descripcion col-12">
-                                Si hay sol, baja los PS, pero <br> potencia el At. Esp.
-                            </div>
-                        </div>
+                            <div class="card_habilidad_descripcion col-12">' .
+                                $pokemonRecibido->getAtaque_2()->getDescripcion() .
+                            '</div>
+                        </div>';
+        $contadorDeAtaques++;
+    }
+
+?>
 
                     </div>
 

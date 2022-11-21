@@ -1,15 +1,18 @@
 <?php
-    trait Ataque{
-        private $idAtaque;
+    class Ataque{
+        private $idAtaque = 0;
         private $nombre;
         private $descripcion;
-
+/*
         public function __construct($idAtaque, $nombre, $descripcion){
             $this->idAtaque = $idAtaque;
             $this->nombre = $nombre;
             $this->descripcion = $descripcion;
         }
-
+*/
+        public function __construct(){
+            
+        }
         public function getIdAtaque(){
             return $this->idAtaque;
         }

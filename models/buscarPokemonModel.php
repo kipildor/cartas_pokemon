@@ -1,6 +1,7 @@
 <?php
 require_once('models/Pokemon.php');
 require_once('models/Tipo.php');
+require_once('models/Ataque.php');
     class BuscarPokemonModel{
         public $pokemon;
         //public $nombre;//test
@@ -41,22 +42,55 @@ require_once('models/Tipo.php');
             $this->pokemon->setIdPokemon($numero);
             $this->pokemon->setHp($hp);
             $this->pokemon->setUrlImg($urlImagen);
-            //$this->pokemon = new Pokemon($numero, $nombre, 0, $urlImagen);
-            
+                        
             foreach($data['types'] as $fila){
                 $tipo = new Tipo();
                 $tipo = $this->pokemon->cargarTipos($fila['type']['name']);
-                //array_push($this->pokemon->tipos, $tipo);
+            
                 $this->pokemon->addTipos($tipo);
             }
-        /*
-            $tipo = new Tipo();
-            $tipo->setDescripcion('Lucha');
-            $tipo->setIdTipo(2);
-            $tipo->setUrlImgTipo('/views/images/tipo_lucha.png');
-            $this->pokemon->addTipos($tipo);
-        */
+
+            $contAtaque = 0;
+            foreach($data['abilities'] as $filaAB){
+                $contAtaque++;
+                $ataque = new Ataque();
+                $ataque->setNombre($filaAB['ability']['name']);
+                $urlAB = $filaAB['ability']['url'];
+                $ataque->setDescripcion($this->buscarDescripcionAtaque($urlAB));
+                $ataque->setIdAtaque($contAtaque);//MODIFICAR MAS ADELANTE
+
+                if($contAtaque == 1){
+                    $this->pokemon->setAtaque_1($ataque);
+                }else{
+                    if($contAtaque == 2){
+                        $this->pokemon->setAtaque_2($ataque);
+                    }else{
+                        break;
+                    }
+                }
+            }
+            if($contAtaque == 1){
+                $ataqueVacio = new Ataque();
+                $ataqueVacio->setIdAtaque(0);
+                $ataqueVacio->setDescripcion('');
+                $ataqueVacio->setNombre('');
+                $this->pokemon->setAtaque_2($ataqueVacio);
+            }
+        
             return $this->pokemon;
+        }
+
+        function buscarDescripcionAtaque($urlAtaque){
+            $data = json_decode( file_get_contents($urlAtaque), true );
+            $descripcionAtaque = '';
+            foreach($data['flavor_text_entries'] as $fila){
+                if($fila['language']['name'] == "es"){
+                    $descripcionAtaque = $fila['flavor_text'];
+                    return $descripcionAtaque;
+                    //break;
+                }
+            }
+            return $descripcionAtaque;
         }
     }
 

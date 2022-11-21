@@ -8,6 +8,8 @@
         private $urlImg;
         //use Ataque;
         private $tipos = array();
+        private $ataque_1;
+        private $ataque_2;
         
 
 /*
@@ -134,6 +136,89 @@
             }
             return $tipo;
         }
+        /*
+        public function cargarAtaques($attack){
+            $ataque = new Ataque();
+            switch ($attack) {
+                case 'normal':
+                    //$tipo->setDescripcion('Normal');
+                    //$tipo->setIdTipo(1);
+                    //$tipo->setUrlImgTipo('/views/images/tipo_normal.png');
+                    break;
+                
+            }
+            return $ataque;
+        }
+        */
+        public function cargarFondo1($type){
+            $urlFondo = '';
+            switch ($type) {
+                case 'normal':
+                    $urlFondo = '/views/images/marmol_gris.jpg';
+                    break;
+                case 'fighting':
+                    $urlFondo = '/views/images/marmol_marron.jpg';
+                    break;
+                case 'flying':
+                    $urlFondo = '/views/images/marmol_azul.jpg';
+                    break;
+                case 'poison':
+                    $urlFondo = '/views/images/marmol_violeta.jpg';
+                    break;
+                case 'ground':
+                    $urlFondo = '/views/images/marmol_marron.jpg';
+                    break;
+                case 'rock':
+                    $urlFondo = '/views/images/marmol_marron.jpg';
+                    break;
+                case 'bug':
+                    $urlFondo = '/views/images/marmol_verde.jpg';
+                    break;
+                case 'ghost':
+                    $urlFondo = '/views/images/marmol_violeta.jpg';
+                    break;
+                case 'steel':
+                    $urlFondo = '/views/images/marmol_gris.jpg';
+                    break;
+                case 'fire':
+                    $urlFondo = '/views/images/marmol_rojo.jpg';
+                    break;
+                case 'water':
+                    $urlFondo = '/views/images/marmol_azul.jpg';
+                    break;
+                case 'grass':
+                    $urlFondo = '/views/images/marmol_verde.jpg';
+                    break;
+                case 'electric':
+                    $urlFondo = '/views/images/marmol_amarillo.jpg';
+                    break;
+                case 'psychic':
+                    $urlFondo = '/views/images/marmol_violeta.jpg';
+                    break;
+                case 'ice':
+                    $urlFondo = '/views/images/marmol_azul.jpg';
+                    break;
+                case 'dragon':
+                    $urlFondo = '/views/images/marmol_naranja.jpg';
+                    break;
+                case 'dark':
+                    $urlFondo = '/views/images/marmol_gris.jpg';
+                    break;
+                case 'fairy':
+                    $urlFondo = '/views/images/marmol_violeta.jpg';
+                    break;
+                case 'unknown':
+                    $urlFondo = '/views/images/marmol_gris.jpg';
+                    break;
+                case 'shadow':
+                    $urlFondo = '/views/images/marmol_gris.jpg';
+                    break;
+                default:
+                    $urlFondo = '/views/images/marmol_gris.jpg';
+                    break;
+            }
+            return $urlFondo;
+        }
         public function getIdPokemon(){
             return $this->idPokemon;
         }
@@ -148,6 +233,12 @@
         }
         public function getTipos(){
             return $this->tipos;
+        }
+        public function getAtaque_1(){
+            return $this->ataque_1;
+        }
+        public function getAtaque_2(){
+            return $this->ataque_2;
         }
 
         public function setIdPokemon($idPokemon){
@@ -165,6 +256,16 @@
         public function addTipos($tipo){
             if($tipo instanceof Tipo) {
                 $this->tipos[]=$tipo;
+            }
+        }
+        public function setAtaque_1($ataque){
+            if($ataque instanceof Ataque) {
+                $this->ataque_1=$ataque;
+            }
+        }
+        public function setAtaque_2($ataque){
+            if($ataque instanceof Ataque) {
+                $this->ataque_2=$ataque;
             }
         }
     }
