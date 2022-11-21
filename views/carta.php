@@ -1,6 +1,6 @@
 
             <div class="contenedor-card_ col justify-content-center">
-                <div class="card" style="background-image: '<?php echo FOLDER_PATH; ?>/views/images/marmol_violeta.jpg';">
+                <div class="card" style="background-image: url(<?php echo FOLDER_PATH . $pokemonRecibido->cargarFondo1($pokemonRecibido->getTipos()[0]->getDescripcion()); ?>);">
                     
                     <div class="card_encabezado">
                         <div class="card_encabezado_nombre"><?php echo $pokemonRecibido->getNombre(); ?></div>

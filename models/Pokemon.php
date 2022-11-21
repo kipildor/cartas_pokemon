@@ -153,64 +153,64 @@
         public function cargarFondo1($type){
             $urlFondo = '';
             switch ($type) {
-                case 'normal':
+                case 'Normal':
                     $urlFondo = '/views/images/marmol_gris.jpg';
                     break;
-                case 'fighting':
+                case 'Lucha':
                     $urlFondo = '/views/images/marmol_marron.jpg';
                     break;
-                case 'flying':
+                case 'Volador':
                     $urlFondo = '/views/images/marmol_azul.jpg';
                     break;
-                case 'poison':
+                case 'Veneno':
                     $urlFondo = '/views/images/marmol_violeta.jpg';
                     break;
-                case 'ground':
+                case 'Tierra':
                     $urlFondo = '/views/images/marmol_marron.jpg';
                     break;
-                case 'rock':
+                case 'Roca':
                     $urlFondo = '/views/images/marmol_marron.jpg';
                     break;
-                case 'bug':
+                case 'Bicho':
                     $urlFondo = '/views/images/marmol_verde.jpg';
                     break;
-                case 'ghost':
+                case 'Fantasma':
                     $urlFondo = '/views/images/marmol_violeta.jpg';
                     break;
-                case 'steel':
+                case 'Acero':
                     $urlFondo = '/views/images/marmol_gris.jpg';
                     break;
-                case 'fire':
+                case 'Fuego':
                     $urlFondo = '/views/images/marmol_rojo.jpg';
                     break;
-                case 'water':
+                case 'Agua':
                     $urlFondo = '/views/images/marmol_azul.jpg';
                     break;
-                case 'grass':
+                case 'Hierba':
                     $urlFondo = '/views/images/marmol_verde.jpg';
                     break;
-                case 'electric':
+                case 'Eléctrico':
                     $urlFondo = '/views/images/marmol_amarillo.jpg';
                     break;
-                case 'psychic':
+                case 'Psíquico':
                     $urlFondo = '/views/images/marmol_violeta.jpg';
                     break;
-                case 'ice':
+                case 'Hielo':
                     $urlFondo = '/views/images/marmol_azul.jpg';
                     break;
-                case 'dragon':
+                case 'Dragon':
                     $urlFondo = '/views/images/marmol_naranja.jpg';
                     break;
-                case 'dark':
+                case 'Siniestro':
                     $urlFondo = '/views/images/marmol_gris.jpg';
                     break;
-                case 'fairy':
+                case 'Hada':
                     $urlFondo = '/views/images/marmol_violeta.jpg';
                     break;
-                case 'unknown':
+                case 'Desconocido':
                     $urlFondo = '/views/images/marmol_gris.jpg';
                     break;
-                case 'shadow':
+                case 'Sombra':
                     $urlFondo = '/views/images/marmol_gris.jpg';
                     break;
                 default:
